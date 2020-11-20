@@ -1,0 +1,6 @@
+framework module Pods_Sydney_Firebase_Midterm {
+  umbrella header "Pods-Sydney Firebase Midterm-umbrella.h"
+
+  export *
+  module * { export * }
+}

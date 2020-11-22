@@ -18,6 +18,7 @@
 		C1D96E4425675109004111BE /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D96E4325675109004111BE /* Model.swift */; };
 		C1D96E4825675703004111BE /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D96E4725675703004111BE /* ArticleCell.swift */; };
 		C1D96E4B25675B4A004111BE /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D96E4A25675B4A004111BE /* PostViewController.swift */; };
+		C1D96E552567C815004111BE /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D96E542567C815004111BE /* ModelManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		C1D96E4325675109004111BE /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		C1D96E4725675703004111BE /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 		C1D96E4A25675B4A004111BE /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		C1D96E542567C815004111BE /* ModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,9 +93,10 @@
 				C1D96DD42566DC44004111BE /* AppDelegate.swift */,
 				C1D96DD62566DC44004111BE /* SceneDelegate.swift */,
 				C1D96E4325675109004111BE /* Model.swift */,
+				C1D96E542567C815004111BE /* ModelManager.swift */,
 				C1D96DD82566DC44004111BE /* ViewController.swift */,
-				C1D96E4725675703004111BE /* ArticleCell.swift */,
 				C1D96E4A25675B4A004111BE /* PostViewController.swift */,
+				C1D96E4725675703004111BE /* ArticleCell.swift */,
 				C1D96DDA2566DC44004111BE /* Main.storyboard */,
 				C1D96DDD2566DC45004111BE /* Assets.xcassets */,
 				C1D96DDF2566DC45004111BE /* LaunchScreen.storyboard */,
@@ -221,6 +224,7 @@
 				C1D96E4B25675B4A004111BE /* PostViewController.swift in Sources */,
 				C1D96DD92566DC44004111BE /* ViewController.swift in Sources */,
 				C1D96DD52566DC44004111BE /* AppDelegate.swift in Sources */,
+				C1D96E552567C815004111BE /* ModelManager.swift in Sources */,
 				C1D96DD72566DC44004111BE /* SceneDelegate.swift in Sources */,
 				C1D96E4825675703004111BE /* ArticleCell.swift in Sources */,
 				C1D96E4425675109004111BE /* Model.swift in Sources */,

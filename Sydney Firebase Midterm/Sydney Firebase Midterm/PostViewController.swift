@@ -6,14 +6,15 @@
 //
 
 import UIKit
-import FirebaseFirestore
-
-var sendTextClosure: ((String, String, String) -> ())?
 
 class PostViewController: UIViewController {
   
   var pickerData: [String] = [String]()
+  let manager = ModelManager()
   
+  let author = Author(email: "sydney@gmail.com", id: "sydney87", name: "Sydney")
+  
+  @IBOutlet weak var publishButton: UIButton!
   @IBOutlet weak var inputTitleTF: UITextField!
   @IBOutlet weak var inputCategoryTF: UITextField!
   @IBOutlet weak var inputContentTF: UITextField! {
@@ -24,51 +25,23 @@ class PostViewController: UIViewController {
       inputCategoryTF.inputView = categoryPicker
     }
   }
-  @IBOutlet weak var publishButton: UIButton!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     pickerData = ["Beauty", "SchoolLife", "Others"]
-//    publishButton.addTarget(self, action: #selector(handleButtonTap), for: .touchUpInside)
+    publishButton.addTarget(self, action: #selector(handleButtonTap), for: .touchUpInside)
   }
   
-  @IBAction func addData(_ sender: Any) {
-    guard let titleText = inputTitleTF.text, let contentText = inputContentTF.text, let categoryText = inputCategoryTF.text else {
-      return
-    }
+  @objc func handleButtonTap(sender: UIButton) {
     
-    let articles = Firestore.firestore().collection("articles")
-      
-    let document = articles.document()
-      
-    let data: [String : Any] = [
-      "title" : titleText,
-      "content" : contentText,
-      "createdTime" : FirebaseFirestore.FieldValue.serverTimestamp(),
-      "id" : document.documentID,
-      "category" : categoryText,
-      "author" : "Sydney"
-    ]
-      
-    document.setData(data)
+    guard let titleText = inputTitleTF.text, let contentText = inputContentTF.text, let categoryText = inputCategoryTF.text else { return }
+    
+    let article = Article(author: author, title: titleText, content: contentText, category: categoryText, createdTime: 0, id: "")
+    
+    manager.addArticle(article: article)
     
     navigationController?.popViewController(animated: true)
   }
-  
-  
-//  @objc func handleButtonTap(sender: UIButton) {
-//
-//    guard let titleText = inputTitleTF.text, let contentText = inputContentTF.text, let categoryText = inputCategoryTF.text else {
-//      return
-//    }
-//
-//    sendTextClosure!(titleText, contentText, categoryText)
-//
-//    addArticle()
-//
-//    navigationController?.popViewController(animated: true)
-//  }
-  
 
 
 }

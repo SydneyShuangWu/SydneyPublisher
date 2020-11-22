@@ -16,6 +16,12 @@ class ArticleCell: UITableViewCell {
   @IBOutlet weak var createdTimeLabel: UILabel!
   @IBOutlet weak var articleContentLabel: UILabel!
   
-  
+  func setupCellWith(article: Article, createdTime: String) {
+    articleTitleLabel.text = article.title
+    authorNameLabel.text = article.author.name
+    categoryLabel.text = article.category
+    createdTimeLabel.text = "\(createdTime)"
+    articleContentLabel.text = article.content
+  }
   
 }

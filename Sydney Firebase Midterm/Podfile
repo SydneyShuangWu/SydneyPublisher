@@ -8,5 +8,8 @@ target 'Sydney Firebase Midterm' do
   # Pods for Sydney Firebase Midterm
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'FirebaseFirestoreSwift'
+
+  pod "ESPullToRefresh"
 
 end
